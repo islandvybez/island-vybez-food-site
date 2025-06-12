@@ -92,7 +92,6 @@
     </p>
   </footer>
 
-  <!-- SOCIAL ICONS -->
   <div style="margin-top: 10px;">
     <a href="https://www.instagram.com/islandvybezfood" target="_blank" style="margin: 0 10px;">
       <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" style="width: 28px; height: 28px;" />
@@ -117,7 +116,6 @@
     </div>
   </div>
 
-  <!-- COOKIE SCRIPT -->
   <script>
     function acceptCookies() {
       localStorage.setItem("cookieConsent", "accepted");
@@ -136,10 +134,11 @@
     };
   </script>
 
-  <!-- ✅ EmailJS SDK v4 (working) -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script>
-    emailjs.init('jyJOWCmacdnF6pFvO');
+  <!-- EmailJS SDK v4 Integration -->
+  <script type="module">
+    import emailjs from 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.mjs';
+
+    emailjs.init('jyJOWCmacdnF6pFvO'); // Replace with your real EmailJS Public Key
 
     document.getElementById("contact-form").addEventListener("submit", function (e) {
       e.preventDefault();
